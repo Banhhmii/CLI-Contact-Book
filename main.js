@@ -30,4 +30,15 @@ function searchContact() {
     }
 }
 
+function deleteContact() {
+    const name = prompt("Enter contact name to delete: ");
+    if(contacts[name]) {
+        delete contacts[name];
+        fs.writeFileSync("contact.json", JSON.stringify(contacts, null, 2));
+        console.log("Contact deleted successfully!");
+    }
+    else {
+        console.log("Contact not found.");
+    }
+}
 

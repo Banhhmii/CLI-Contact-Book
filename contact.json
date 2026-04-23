@@ -2,9 +2,5 @@
   "Tom Brady": {
     "phone": "123-456-7890",
     "email": "tom.brady@example.com"
-  },
-  "Tommy Ngo": {
-    "phone": "123-456-2348",
-    "email": "tommy@example.com"
   }
 }
