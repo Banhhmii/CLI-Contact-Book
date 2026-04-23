@@ -21,4 +21,13 @@ function addContact() {
     console.log("Contact added successfully!");
 }
 
+function searchContact() {
+    const name = prompt("Enter contact name to search: ");
+    if(contacts[name]) {
+        console.log(`${name}: ${contacts[name].phone}, ${contacts[name].email}`);
+    } else {
+        console.log("Contact not found.");
+    }
+}
+
 
