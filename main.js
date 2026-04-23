@@ -5,7 +5,7 @@ const data = fs.readFileSync('contact.json');
 const contacts = JSON.parse(data);
 
 function displayContacts() {
-    console.log("Contact List:");
+    console.log("\nContact List:");
     for (const name in contacts) {
         console.log(`${name}: ${contacts[name].phone}, ${contacts[name].email}`);
     }
@@ -42,3 +42,35 @@ function deleteContact() {
     }
 }
 
+function main() {
+    while (true) {
+        console.log("\n1. Display Contacts");
+        console.log("2. Add Contact");
+        console.log("3. Search Contact");
+        console.log("4. Delete Contact");
+        console.log("5. Exit");
+
+        const choice = prompt("Choose an option: ");
+        switch (choice) {
+            case '1':
+                displayContacts();
+                break;
+            case '2':
+                addContact();
+                break;
+            case '3':
+                searchContact();
+                break;
+            case '4':
+                deleteContact();
+                break;
+            case '5':
+                console.log("Exiting...");
+                return;
+            default:
+                console.log("Invalid option, please try again.");
+        }
+    }
+}
+
+main();
